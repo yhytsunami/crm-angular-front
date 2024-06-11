@@ -1,1 +1,9 @@
 <p>msg-template works!</p>
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="msgContent">模板内容</label>
+        <input type="text" [formControl]="msgContent" />
+        <p>Value: {{ msgContent.value }}</p>
+    </div>
+    <button type="button" (click)="updateName()">Update Name</button>
+</form>
